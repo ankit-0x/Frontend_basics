@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(3, 135, 73);
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: chocolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+   
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg) translate(300px);
+    }
+    to{
+        transform: rotate(360deg) translate(300px);
+    }
+}

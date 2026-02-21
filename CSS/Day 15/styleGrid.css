@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    height: 100%;
+    padding: 5rem;
+    background-color: bisque;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill,minmax(100px,200px));
+    justify-content: center;
+}
+
+.box{
+    background-color: greenyellow;
+}

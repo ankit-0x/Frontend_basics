@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="title">
+        <h1>Rock Paper Scissor</h1>
+      </div>
+      <div class="score-container">
+        <div class="player">
+          <div class="player-label">You</div>
+          <div class="player-score">0</div>
+        </div>
+        <div class="vs">
+            <img src="./vs-img.jpg" alt="VS" class="vs-icon">
+        </div>
+        <div class="computer">
+          <div class="computer-label">Computer</div>
+          <div class="computer-score">0</div>
+        </div>
+      </div>
+      <div class="choosed">
+        <div class="player-choice">
+            <div class="player-choice-label">You Chose</div>
+            <div class="player-choosed-icon"></div>
+        </div>
+        <div class="computer-choice">
+            <div class="computer-choice-label">Computer Chose</div>
+            <div class="computer-choosed-icon"></div>
+        </div>
+      </div>
+     <div class="choices">
+       <button  class="rock"><img src="./rock.png" alt="Rock" class="r"></button>
+        <button class="paper"><img src="./paper.png" alt="Paper" class="p"></button>
+        <button class="scissor"><img src="./scissor.png" alt="Scissors" class="s"></button>
+      </div>
+      <div class="footer">
+        <div class="winner"></div>
+        <button class="res-btn">Restart Game</button>
+        <div class="game-count">
+            <div>Game Count : </div>
+            <div class="count">0</div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

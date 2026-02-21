@@ -1,0 +1,94 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+    }
+
+    .stopwatch {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px 50px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      width: 350px;
+    }
+
+    .stopwatch h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .time {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 25px 0;
+      letter-spacing: 2px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px;
+    }
+
+    button {
+      flex: 1;
+      margin: 0 5px;
+      padding: 12px 0;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      color: #333;
+    }
+
+    button.start {
+      background: #4caf50;
+      color: #fff;
+    }
+
+    button.pause {
+      background: #ff9800;
+      color: #fff;
+    }
+
+    button.reset {
+      background: #f44336;
+      color: #fff;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 400px) {
+      .stopwatch {
+        width: 90%;
+        padding: 30px;
+      }
+
+      .time {
+        font-size: 2.5rem;
+      }
+    }

@@ -1,0 +1,32 @@
+.card{
+    width: 30vw;
+    height: 20vh;
+    background-color: rgb(199, 246, 151);
+    border: 5px rgb(193, 107, 15) solid;
+    padding: 10px;
+    margin: 20px 20px 30px 35vw;
+    overflow: auto;
+}
+
+body{
+    background-color: cadetblue;
+}
+
+h2{
+    color: blue;
+    text-align: center;
+}
+
+h3{
+    color: rgb(217, 0, 255);
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+.card:hover{
+    background-color: aliceblue;
+    transform: scale(1.2);
+}

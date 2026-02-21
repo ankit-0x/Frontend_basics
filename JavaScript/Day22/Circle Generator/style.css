@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.circle{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    animation: grow 5s ease-out forwards;
+}
+
+@keyframes grow {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+        font-size: 5px;
+    }
+    100%{
+        transform: scale(3);
+        opacity: 0;
+        font-size: 40px;
+    }
+    
+}

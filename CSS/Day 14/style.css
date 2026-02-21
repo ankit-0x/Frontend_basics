@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    padding: 5rem;
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.box{
+    border: 0.5rem solid lightcoral;
+    font-size: 2rem;
+    background-color: lightgreen;
+    text-align: center;
+}
+
+.header,.footer{
+    grid-column: 1/4;
+}
+
+.sidebar{
+    grid-row: 2/4;
+}
+
+.content1{
+    grid-column: 2/4;
+}
+

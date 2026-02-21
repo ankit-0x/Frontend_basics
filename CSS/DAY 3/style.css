@@ -1,0 +1,37 @@
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+.one{
+    font-stretch: expanded;
+}
+/* .two{
+    font-stretch: ultra-condensed;
+}
+.three{
+    font-stretch: extra-condensed;
+} */
+.four{
+    font-stretch: condensed;
+}
+/* .five{
+    font-stretch: semi-condensed;
+}
+.six{
+    font-stretch: semi-expanded;
+} */
+.seven{
+    font-stretch: expanded;
+}
+/* .eight{
+    font-stretch: extra-expanded;
+} */
+.nine{
+    font-stretch: ultra-expanded;
+}
+.ten{
+    font-stretch: 80%;
+}
+h1{
+    font-stretch: ultra-expanded;
+}

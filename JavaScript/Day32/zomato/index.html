@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- MAIN HEADER -->
+<header class="main-header">
+    <div class="header-left">
+        <h1 class="logo">Zomato</h1>
+        <input class="search-box" type="text" placeholder="Search for restaurant, cuisine or dish">
+    </div>
+    <div class="header-right">
+        <button class="auth-btn login-btn">Log in</button>
+        <button class="auth-btn signup-btn">Sign up</button>
+    </div>
+</header>
+
+<!-- FILTER BAR (1 line below header) -->
+<div id="head">
+    <button id="Filters">Filters</button>
+    <button id="Offers">Offers</button>
+    <button id="Rating">Rating 4.5+</button>
+    <button id="Alcohol">Serves Alcohol</button>
+    <button id="Open">Open Now</button>
+</div>
+
+<!-- SORT POPUP -->
+<div id="filter_popup" class="sort-overlay hidden">
+    <div class="sort-popup">
+        <div class="sort-header">
+            <h3>Sort By</h3>
+            <span id="close" class="close-btn">✕</span>
+        </div>
+        <div class="sort-body">
+            <label><input type="radio" name="sort" value="rating"> Rating: High to Low</label>
+            <label><input type="radio" name="sort" value="low-high"> Cost: Low to High</label>
+            <label><input type="radio" name="sort" value="high-low"> Cost: High to Low</label>
+            <label><input type="radio" name="sort" value="distance"> Distance: Nearest First</label>
+        </div>
+        <div class="sort-footer">
+            <button id="apply" class="apply-btn">Apply</button>
+        </div>
+    </div>
+</div>
+
+<!-- RESTAURANT CARDS -->
+<div id="root"></div>
+
+<script src="./script.js"></script>
+</body>
+</html>

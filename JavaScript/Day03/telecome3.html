@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NEELU TELECOME | Mobile Repairing Shop</title>
+  <meta name="description" content="NEELU TELECOME – Fast, reliable mobile repairing in your neighborhood." />
+  <meta name="theme-color" content="#1d4ed8" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --text: #1e293b;
+      --muted: #64748b;
+      --brand: #1d4ed8; /* blue-700 */
+      --brand-light: #3b82f6; /* blue-500 */
+      --card: #ffffff;
+      --radius: 16px;
+      --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* Navigation */
+    .topbar {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      z-index: 50;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--brand);
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .navlinks {
+      display: flex;
+      gap: 1rem;
+    }
+    .navlinks a:hover {
+      color: var(--brand);
+    }
+    .btn {
+      padding: .6rem 1rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      transition: all .25s ease;
+      cursor: pointer;
+      border: none;
+    }
+    .btn.primary {
+      background: var(--brand);
+      color: #fff;
+    }
+    .btn.primary:hover { background: var(--brand-light); }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #e0f2fe, #fff);
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      color: var(--brand);
+      margin-bottom: 1rem;
+    }
+    .hero p { color: var(--muted); font-size: 1.1rem; }
+    .hero .cta { margin-top: 1.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+
+    /* Sections */
+    section {
+      padding: 3rem 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-title { font-size: 1.8rem; color: var(--brand); margin-bottom: .5rem; text-align: center; }
+    .section-sub { text-align: center; color: var(--muted); margin-bottom: 2rem; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      transition: transform .25s ease;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card h4 { margin-top: 0; color: var(--brand); }
+    .card p { color: var(--muted); }
+
+    /* Table */
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .price-table th, .price-table td {
+      padding: 1rem;
+      border-bottom: 1px solid #e2e8f0;
+      text-align: left;
+    }
+    .price-table th { background: #f1f5f9; color: var(--brand); }
+
+    /* Testimonials */
+    .testimonial {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .testimonial p { font-style: italic; }
+    .testimonial strong { display: block; margin-top: .5rem; color: var(--brand); }
+
+    /* Contact Form */
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+    input, textarea, select {
+      padding: .8rem;
+      border-radius: var(--radius);
+      border: 1px solid #cbd5e1;
+      outline: none;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--brand);
+      box-shadow: 0 0 0 3px rgba(29,78,216,0.2);
+    }
+
+    /* Footer */
+    footer {
+      background: #1e293b;
+      color: #cbd5e1;
+      padding: 2rem 1rem;
+    }
+    footer .footgrid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+    footer a { color: #f1f5f9; }
+    footer a:hover { color: var(--brand-light); }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="nav">
+      <div class="brand">📱 NEELU TELECOME</div>
+      <nav class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="btn primary">Call Now</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Fast & Reliable Mobile Repairing</h1>
+    <p>We fix screens, batteries, charging ports, and more — same‑day service with warranty.</p>
+    <div class="cta">
+      <a href="#services" class="btn primary">View Services</a>
+      <a href="#pricing" class="btn">Check Pricing</a>
+      <a href="#contact" class="btn primary">Book Now</a>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-sub">Professional repairs with quality parts and quick turnaround.</p>
+    <div class="cards">
+      <div class="card"><h4>Screen Replacement</h4><p>High‑quality displays replaced within an hour.</p></div>
+      <div class="card"><h4>Battery Change</h4><p>Original‑grade batteries for lasting performance.</p></div>
+      <div class="card"><h4>Charging Port Repair</h4><p>Fix loose or faulty ports to restore fast charging.</p></div>
+      <div class="card"><h4>Camera & Speaker Repair</h4><p>Restore sound and picture quality to original standards.</p></div>
+      <div class="card"><h4>Water Damage Treatment</h4><p>Safe cleaning and board repair to revive soaked phones.</p></div>
+      <div class="card"><h4>Software Fix</h4><p>Resolve boot loops, OS updates, and data issues.</p></div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2 class="section-title">Pricing</h2>
+    <p class="section-sub">Transparent rates, no hidden costs.</p>
+    <table class="price-table">
+      <thead><tr><th>Service</th><th>Starting From</th><th>Warranty</th></tr></thead>
+      <tbody>
+        <tr><td>Screen Replacement</td><td>₹1499</td><td>3–6 Months</td></tr>
+        <tr><td>Battery Replacement</td><td>₹899</td><td>6 Months</td></tr>
+        <tr><td>Charging Port Repair</td><td>₹699</td><td>3 Months</td></tr>
+        <tr><td>Water Damage</td><td>₹999</td><td>—</td></tr>
+        <tr><td>Software Fix</td><td>₹399</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="testimonials">
+    <h2 class="section-title">What Our Customers Say</h2>
+    <p class="section-sub">We value every feedback.</p>
+    <div class="cards">
+      <div class="testimonial"><p>“Excellent service! My phone was fixed in under an hour.”</p><strong>- A. Sharma</strong></div>
+      <div class="testimonial"><p>“Battery backup feels like new. Staff was polite and professional.”</p><strong>- Priya V.</strong></div>
+      <div class="testimonial"><p>“Quick pickup and delivery, great experience overall.”</p><strong>- R. Khan</strong></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-sub">Visit our shop or get in touch today.</p>
+    <div class="cards">
+      <div class="card">
+        <h4>Store Info</h4>
+        <p>Main Market Road, Your City</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Email:</strong> support@neelutelecome.com</p>
+        <p><strong>Hours:</strong> Mon – Sun, 10 AM – 8 PM</p>
+      </div>
+      <div class="card">
+        <h4>Quick Contact Form</h4>
+        <form id="contactForm">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn primary">Send Message</button>
+        </form>
+        <p id="formMsg" style="margin-top:0.5rem;color:var(--muted);"></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footgrid">
+      <div>
+        <h4>NEELU TELECOME</h4>
+        <p>Trusted mobile repairing shop offering quick, reliable service with warranty.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#services">Services</a><br>
+        <a href="#pricing">Pricing</a><br>
+        <a href="#testimonials">Reviews</a><br>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <a href="#">Facebook</a><br>
+        <a href="#">Instagram</a><br>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:1rem;">© <span id="year"></span> NEELU TELECOME. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      document.getElementById('formMsg').textContent = "Thank you! We will get back to you soon.";
+      this.reset();
+    });
+  </script>
+</body>
+</html>

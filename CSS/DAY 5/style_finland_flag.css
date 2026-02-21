@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+}
+
+.up{
+    height: 40vh;
+    width: 20vh;
+    background-color: midnightblue;
+    margin-left: 25vw;
+}
+
+.middle{
+    height: 20vh;
+    width: 100vw;
+    background-color: midnightblue;
+}
+.down{
+    height: 40vh;
+    width: 20vh;
+    background-color: midnightblue;
+    margin-left: 25vw;
+}

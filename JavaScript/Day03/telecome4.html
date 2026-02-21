@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NEELU TELECOME — Mobile Repairing</title>
+    <meta
+      name="description"
+      content="Professional mobile repairing — screen, battery, charging port, water damage, software fixes. Same‑day service."
+    />
+    <meta name="theme-color" content="#0d6efd" />
+
+    <!-- Open Graph / Social -->
+    <link rel="icon" href="favicon.ico" />
+    <meta property="og:title" content="NEELU TELECOME — Mobile Repairing" />
+    <meta
+      property="og:description"
+      content="Fast, trusted mobile repair with warranty and doorstep pickup."
+    />
+
+    <style>
+      /* ====== Simple Professional White-Blue Theme ====== */
+      :root {
+        --bg: #f7fbff;
+        --card: #ffffff;
+        --text: #0f1724;
+        --muted: #52607a;
+        --brand: #0d6efd;
+        --brand-2: #4aa3ff;
+        --accent: #0ea5e9;
+        --radius: 14px;
+        --shadow: 0 12px 30px rgba(13, 110, 253, 0.08);
+        --glass: rgba(255, 255, 255, 0.7);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial;
+        color: var(--text);
+        background: linear-gradient(180deg, #f7fbff 0%, #eef6ff 100%);
+      }
+
+      a {
+        color: inherit;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 18px;
+      }
+
+      /* NAV */
+      header {
+        position: sticky;
+        top: 12px;
+        z-index: 60;
+      }
+      .nav {
+        background: var(--card);
+        border-radius: 16px;
+        padding: 12px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(6px);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .brand .logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--brand), var(--brand-2));
+        display: grid;
+        place-items: center;
+        color: white;
+        font-weight: 800;
+      }
+      .brand span {
+        font-weight: 700;
+        font-size: 1.05rem;
+      }
+      nav a {
+        margin: 0 8px;
+        color: var(--muted);
+        font-weight: 600;
+      }
+      nav a:hover {
+        color: var(--brand);
+      }
+      .actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .btn {
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: none;
+        cursor: pointer;
+        font-weight: 700;
+      }
+      .btn.primary {
+        background: linear-gradient(90deg, var(--brand), var(--brand-2));
+        color: white;
+        box-shadow: 0 8px 22px rgba(13, 110, 253, 0.12);
+      }
+      .btn.ghost {
+        background: transparent;
+        border: 1px solid #e6eefb;
+        color: var(--brand);
+      }
+
+      /* HERO */
+      .hero {
+        padding: 80px 0 40px;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 28px;
+        align-items: center;
+      }
+      .eyebrow {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: #eef6ff;
+        color: var(--brand);
+        font-weight: 700;
+        font-size: 0.86rem;
+      }
+      h1 {
+        font-size: 2.4rem;
+        margin: 0.6rem 0;
+        line-height: 1.05;
+      }
+      p.lead {
+        color: var(--muted);
+        font-size: 1rem;
+        margin: 0;
+      }
+
+      /* Quote card */
+      .card {
+        background: var(--card);
+        padding: 18px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid #e6eefb;
+        background: #fbfdff;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        box-shadow: 0 6px 18px rgba(14, 165, 233, 0.12);
+        border-color: var(--brand);
+      }
+
+      /* Services */
+      .services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 18px;
+      }
+      .service {
+        padding: 16px;
+        border-radius: 12px;
+        background: linear-gradient(180deg, #fff, #fbfdff);
+        border: 1px solid #eef6ff;
+      }
+      .service h4 {
+        margin: 8px 0;
+        color: var(--brand);
+      }
+      .service p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      /* Pricing */
+      .pricing {
+        display: flex;
+        gap: 16px;
+        margin-top: 20px;
+      }
+      .plan {
+        flex: 1;
+        padding: 18px;
+        border-radius: 12px;
+        background: var(--card);
+        box-shadow: var(--shadow);
+        text-align: center;
+      }
+      .price {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: var(--brand);
+      }
+
+      /* Testimonials */
+      .testi-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 24px;
+        gap: 12px;
+      }
+      .testi {
+        padding: 14px;
+        border-radius: 12px;
+        background: #fff;
+        border: 1px solid #eef6ff;
+      }
+
+      /* Contact */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-top: 18px;
+      }
+      iframe {
+        width: 100%;
+        height: 280px;
+        border: 0;
+        border-radius: 12px;
+      }
+
+      footer {
+        padding: 28px 0;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      /* Responsive */
+      @media (max-width: 980px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .services {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .testi-wrap {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 640px) {
+        .nav {
+          padding: 10px;
+        }
+        .services {
+          grid-template-columns: 1fr;
+        }
+        .pricing {
+          flex-direction: column;
+        }
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* small UX */
+      .muted {
+        color: var(--muted);
+      }
+      .center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header style="margin-top: 18px">
+        <div class="nav">
+          <div class="brand">
+            <div class="logo">NT</div>
+            <span>NEELU TELECOME</span>
+          </div>
+          <nav class="hide-mobile" aria-label="Main navigation">
+            <a href="#services">Services</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <div class="actions">
+            <a class="btn ghost" href="tel:+919876543210">📞 +91 98765 43210</a>
+            <button
+              class="btn primary"
+              onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+            >
+              Book Now
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-grid">
+            <div>
+              <div class="eyebrow">Same‑day • Warranty • Genuine parts</div>
+              <h1>
+                We fix phones fast — screens, batteries, charging ports & more
+              </h1>
+              <p class="lead">
+                Trusted technicians, transparent pricing and doorstep pickup.
+                Walk‑in or book pickup — diagnosis within minutes.
+              </p>
+
+              <div class="services" style="margin-top: 18px">
+                <div class="service">
+                  <div style="font-size: 22px">📱</div>
+                  <h4>Screen Replacement</h4>
+                  <p>High-quality panels, color-calibrated, fitted on site.</p>
+                </div>
+                <div class="service">
+                  <div style="font-size: 22px">🔋</div>
+                  <h4>Battery Change</h4>
+                  <p>
+                    Original-grade batteries and calibration for longer life.
+                  </p>
+                </div>
+                <div class="service">
+                  <div style="font-size: 22px">⚡</div>
+                  <h4>Charging & Power</h4>
+                  <p>Loose ports, charging ICs and power diagnostics.</p>
+                </div>
+              </div>
+
+              <div class="pricing" role="list">
+                <div class="plan" role="listitem">
+                  <div class="muted">Screen from</div>
+                  <div class="price">₹1499</div>
+                  <div class="muted">Est. 30–90 min</div>
+                </div>
+                <div class="plan" role="listitem">
+                  <div class="muted">Battery from</div>
+                  <div class="price">₹899</div>
+                  <div class="muted">Est. 20–40 min</div>
+                </div>
+                <div class="plan" role="listitem">
+                  <div class="muted">Port repair</div>
+                  <div class="price">₹699</div>
+                  <div class="muted">Est. 30–60 min</div>
+                </div>
+              </div>
+            </div>
+
+            <aside>
+              <div class="card">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  "
+                >
+                  <div>
+                    <div class="muted">Quick estimate</div>
+                    <div style="font-weight: 700">Get an indicative price</div>
+                  </div>
+                  <div class="muted" style="font-size: 12px">
+                    Free • No spam
+                  </div>
+                </div>
+
+                <form
+                  id="quickForm"
+                  class="form-row"
+                  onsubmit="return false"
+                  style="margin-top: 12px"
+                >
+                  <input
+                    id="qBrand"
+                    name="brand"
+                    placeholder="Brand (e.g., Samsung)"
+                    required
+                  />
+                  <input
+                    id="qModel"
+                    name="model"
+                    placeholder="Model (e.g., A54)"
+                    required
+                  />
+                  <select id="qIssue" name="issue" required>
+                    <option value="">Select issue</option>
+                    <option value="screen">Screen Broken</option>
+                    <option value="battery">Battery Replacement</option>
+                    <option value="charging">Charging Port</option>
+                    <option value="water">Water Damage</option>
+                    <option value="software">Software Issue</option>
+                  </select>
+                  <input
+                    id="qPhone"
+                    name="phone"
+                    placeholder="+91 9XXXXXXXXX"
+                    pattern="(\+91)?[6-9]\d{9}"
+                  />
+                  <div style="display: flex; gap: 8px">
+                    <button class="btn primary" onclick="estimate()">
+                      Get Estimate
+                    </button>
+                    <button class="btn ghost" onclick="openWhatsAppQuick()">
+                      WhatsApp
+                    </button>
+                  </div>
+                  <div id="qResult" class="muted" style="font-size: 13px"></div>
+                </form>
+              </div>
+
+              <div style="height: 16px"></div>
+              <div class="card">
+                <div style="font-weight: 700">Why choose us</div>
+                <ul
+                  style="
+                    margin: 8px 0 0;
+                    padding-left: 18px;
+                    color: var(--muted);
+                  "
+                >
+                  <li>Certified technicians</li>
+                  <li>Genuine parts & warranty</li>
+                  <li>Doorstep pickup & delivery</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section id="testimonials">
+          <h3 style="margin: 8px 0 0">What customers say</h3>
+          <div class="testi-wrap">
+            <div class="testi">
+              “Fixed my screen in 40 mins. Friendly service.”
+              <div class="muted" style="margin-top: 8px">— A. Sharma</div>
+            </div>
+            <div class="testi">
+              “Battery replacement was genuine and fast.”
+              <div class="muted" style="margin-top: 8px">— Priya V.</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact">
+          <h3 style="margin-top: 18px">Visit or contact</h3>
+          <div class="contact-grid">
+            <div class="card">
+              <div style="font-weight: 700">Store details</div>
+              <p class="muted">Shop No. 12, Main Market Road, Your City</p>
+              <p class="muted">
+                Phone:
+                <a href="tel:+919876543210" style="color: var(--brand)"
+                  >+91 98765 43210</a
+                >
+              </p>
+              <p class="muted">
+                Email:
+                <a
+                  href="mailto:support@neelutelecome.com"
+                  style="color: var(--brand)"
+                  >support@neelutelecome.com</a
+                >
+              </p>
+
+              <div style="margin-top: 12px">
+                <form id="contactForm" onsubmit="return false">
+                  <input id="cName" placeholder="Your name" required />
+                  <input
+                    id="cPhone"
+                    placeholder="Phone"
+                    required
+                    style="margin-top: 8px"
+                  />
+                  <select id="cService" style="margin-top: 8px">
+                    <option>Choose service</option>
+                    <option>Screen Replacement</option>
+                    <option>Battery</option>
+                    <option>Charging Port</option>
+                  </select>
+                  <div style="display: flex; gap: 8px; margin-top: 10px">
+                    <button class="btn primary" onclick="submitContact()">
+                      Request callback
+                    </button>
+                    <button class="btn ghost" onclick="openWhatsAppContact()">
+                      WhatsApp
+                    </button>
+                  </div>
+                  <div
+                    id="cMsg"
+                    class="muted"
+                    style="margin-top: 8px; font-size: 13px"
+                  ></div>
+                </form>
+              </div>
+            </div>
+
+            <div>
+              <iframe
+                title="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d77.2090!3d28.6139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNEELU%20TELECOME!5e0!3m2!1sen!2sin!4v0000000000"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div style="max-width: 900px; margin: 20px auto 40px">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 12px;
+              flex-wrap: wrap;
+            "
+          >
+            <div style="display: flex; align-items: center; gap: 10px">
+              <div
+                class="logo"
+                style="
+                  width: 44px;
+                  height: 44px;
+                  border-radius: 10px;
+                  background: linear-gradient(
+                    135deg,
+                    var(--brand),
+                    var(--brand-2)
+                  );
+                  display: grid;
+                  place-items: center;
+                  color: white;
+                "
+              >
+                NT
+              </div>
+              <div>
+                <strong>NEELU TELECOME</strong>
+                <div class="muted" style="font-size: 13px">
+                  Trusted mobile repairing — Same‑day • Warranty
+                </div>
+              </div>
+            </div>
+            <div class="muted">© <span id="year">2025</span></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a
+      href="https://wa.me/919876543210?text=Hi%20Neelu%20Telecome%2C%20I%20need%20a%20repair"
+      style="
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        border-radius: 999px;
+        display: inline-block;
+        z-index: 90;
+      "
+    >
+      <div
+        style="
+          width: 56px;
+          height: 56px;
+          border-radius: 999px;
+          background: linear-gradient(45deg, #25d366, #128c7e);
+          display: grid;
+          place-items: center;
+          color: white;
+          font-size: 22px;
+          box-shadow: 0 8px 26px rgba(18, 140, 126, 0.18);
+        "
+      >
+        💬
+      </div>
+    </a>
+
+    <script>
+      // Set current year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Stable base prices
+      const base = {
+        screen: 1499,
+        battery: 899,
+        charging: 699,
+        water: 999,
+        software: 399,
+      };
+
+      function estimate() {
+        const issue = document.getElementById("qIssue").value;
+        if (!issue) {
+          document.getElementById("qResult").textContent =
+            "Please select issue.";
+          return;
+        }
+        const est = Math.round(base[issue] * 1.18);
+        document.getElementById(
+          "qResult"
+        ).innerHTML = `Indicative price: <strong>₹${est}</strong> (incl. GST).`;
+      }
+
+      function openWhatsAppQuick() {
+        const brand = document.getElementById("qBrand").value || "Not provided";
+        const model = document.getElementById("qModel").value || "Not provided";
+        const issue = document.getElementById("qIssue").value || "Not provided";
+        const phone = document.getElementById("qPhone").value || "";
+        const msg = encodeURIComponent(
+          `New quick request:\nBrand: ${brand}\nModel: ${model}\nIssue: ${issue}\nPhone: ${phone}`
+        );
+        window.open("https://wa.me/919876543210?text=" + msg, "_blank");
+      }
+
+      function submitContact() {
+        const name = document.getElementById("cName").value.trim();
+        const phone = document.getElementById("cPhone").value.trim();
+        if (!name || !phone) {
+          document.getElementById("cMsg").textContent =
+            "Please enter name and phone.";
+          return;
+        }
+        document.getElementById("cMsg").textContent =
+          "Thanks! We will call you within 10 minutes during working hours.";
+        document.getElementById("cName").value = "";
+        document.getElementById("cPhone").value = "";
+        document.getElementById("cService").selectedIndex = 0;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+.container{
+    height: 1000px;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+}
+
+.box1{
+    background-color: red;
+    order: 4;
+    flex-grow: 2;
+    flex-shrink: 2;
+    align-self: end;
+}
+.box2{
+    background-color: rgb(73, 17, 169);
+    flex-grow: 3;
+    flex-shrink: 3;
+    align-self: start;
+}
+.box3{
+    background-color: rgb(16, 168, 59);
+    order: -1;
+}
+.box4{
+    background-color: rgb(237, 202, 29);
+    flex-basis: 200px;
+}
+

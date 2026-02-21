@@ -1,0 +1,38 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#root{
+    background-color: wheat;
+    text-align: center;
+    padding: 0px 50px 30px 50px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+input{
+    font-size: 20px;
+    padding: 4px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+}
+
+button{
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border-color: aqua;
+}
+
+#result{
+    font-size: 25px;
+    font-weight: bold;
+    color: navy;
+}

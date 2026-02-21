@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NEELU TELECOME | Mobile Repairing Shop</title>
+  <meta name="description" content="NEELU TELECOME – Fast, reliable mobile repairing in your neighborhood. Screen, battery, charging, water damage & more. Same‑day service available." />
+  <meta name="keywords" content="Neelu Telecome, mobile repairing, phone repair, screen replacement, battery change, charging port, water damage, India" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NEELU TELECOME | Mobile Repairing Shop" />
+  <meta property="og:description" content="Fast, friendly, and affordable phone repairs. Same‑day service on most issues." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.png" />
+
+  <style>
+    :root{
+      --bg: #0b1020;
+      --card: #0f172a;
+      --muted: #94a3b8;
+      --text: #e5e7eb;
+      --brand: #0ea5e9; /* sky-500 */
+      --accent: #22c55e; /* green-500 */
+      --danger: #ef4444; /* red-500 */
+      --ring: rgba(14,165,233,.35);
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(2,6,23,.45);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text); background: radial-gradient(1200px 600px at 80% -10%, #0b2c4a33, transparent),
+                         radial-gradient(800px 500px at -20% 10%, #064e3b33, transparent), var(--bg);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{width:min(1100px, 92%); margin:0 auto}
+
+    /* Top bar */
+    .topbar{position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(8px); background: rgba(2,6,23,.7); border-bottom:1px solid #1f2937}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:.8rem 0}
+    .brand{display:flex; align-items:center; gap:.6rem; font-weight:800; letter-spacing:.5px}
+    .brand .logo{width:34px; height:34px; display:grid; place-items:center; background:linear-gradient(135deg, var(--brand), #38bdf8); border-radius:12px; box-shadow: var(--shadow)}
+    .brand span{font-size:1.05rem}
+    .nav a.btn{padding:.6rem 1rem; border-radius:999px; background:var(--brand); color:#001019; font-weight:700; box-shadow:0 6px 22px rgba(14,165,233,.45)}
+    .navlinks{display:flex; gap:1rem; align-items:center}
+    .navlinks a{opacity:.9}
+    .navlinks a:hover{opacity:1; text-decoration:underline; text-underline-offset:4px}
+
+    /* Hero */
+    .hero{padding:5.5rem 0 3.5rem}
+    .grid{display:grid; gap:2rem}
+    .grid.hero-grid{grid-template-columns:1.1fr .9fr; align-items:center}
+    .badge{display:inline-flex; align-items:center; gap:.45rem; padding:.35rem .6rem; border-radius:999px; background:#082f49; color:#bae6fd; border:1px solid #0c4a6e}
+    .hero h1{font-size:clamp(2rem, 3.6vw + .5rem, 3rem); margin:.6rem 0}
+    .lead{color:var(--muted); font-size:1.05rem}
+    .cta{margin-top:1.2rem; display:flex; flex-wrap:wrap; gap:.8rem}
+    .btn{display:inline-flex; align-items:center; gap:.5rem; padding:.9rem 1.1rem; border-radius:14px; border:1px solid #1f2a44; background:#0b1226; color:var(--text); font-weight:700}
+    .btn.primary{background:linear-gradient(135deg, var(--brand), #38bdf8); color:#071018; border:none}
+    .btn.whatsapp{background:#1a2e22; border-color:#14532d}
+    .btn small{opacity:.8; font-weight:600}
+    .hero-card{background:linear-gradient(180deg, #0b1226, #0a1022); padding:1.2rem; border-radius:var(--radius); border:1px solid #1f2a44; box-shadow: var(--shadow)}
+    .hero-card h3{margin:.4rem 0 0; font-size:1.15rem}
+    .statrow{display:grid; grid-template-columns:repeat(3, 1fr); gap:.8rem; margin-top:1rem}
+    .stat{background:#0c142b; border:1px solid #1f2a44; border-radius:16px; padding:.8rem}
+    .stat strong{font-size:1.3rem}
+
+    /* Section */
+    section{padding:3rem 0}
+    .section-title{font-size:1.6rem; margin:0 0 .6rem}
+    .section-sub{color:var(--muted); margin:0 0 1.2rem}
+    .cards{display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem}
+    .card{background:var(--card); border:1px solid #1f2937; border-radius:var(--radius); padding:1rem; box-shadow: var(--shadow)}
+    .card h4{margin:.2rem 0 .5rem}
+    .chip{display:inline-flex; align-items:center; gap:.4rem; padding:.25rem .55rem; border-radius:999px; font-size:.8rem; background:#052e1f; border:1px solid #14532d}
+
+    /* Price table */
+    .price-table{width:100%; border-collapse:collapse; overflow:hidden; border-radius:var(--radius)}
+    .price-table th, .price-table td{padding:.85rem 1rem; border-bottom:1px dashed #243046}
+    .price-table th{text-align:left; background:#0c142b}
+    .price-table tr:hover{background:#0b1226}
+
+    /* FAQ */
+    details{background:#0b1226; border:1px solid #1f2a44; padding:1rem; border-radius:14px}
+    details + details{margin-top:.8rem}
+    summary{cursor:pointer; font-weight:700}
+
+    /* Footer */
+    footer{padding:2.2rem 0; border-top:1px solid #1f2937; color:#9fb2c8}
+    .footgrid{display:grid; grid-template-columns: 2fr 1fr 1fr; gap:1rem}
+    .small{font-size:.92rem; color:#a6b4c7}
+
+    /* Utils */
+    .row{display:flex; gap:.8rem; align-items:center}
+    .kv{display:grid; grid-template-columns:140px 1fr; gap:.6rem}
+    .muted{color:var(--muted)}
+    .hidden{display:none}
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .grid.hero-grid{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr 1fr}
+      .footgrid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 640px){
+      .navlinks{display:none}
+      .cards{grid-template-columns:1fr}
+      .kv{grid-template-columns:1fr}
+      .statrow{grid-template-columns:1fr}
+      .hero{padding:4rem 0 2.2rem}
+    }
+  </style>
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobilePhoneStore",
+    "name": "NEELU TELECOME",
+    "description": "Mobile repairing shop – screen, battery, charging, water damage & more.",
+    "image": "https://example.com/storefront.jpg",
+    "telephone": "+91-98765-43210",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Main Market Road",
+      "addressLocality": "Your City",
+      "addressRegion": "Your State",
+      "postalCode": "123456",
+      "addressCountry": "IN"
+    },
+    "openingHours": ["Mo-Su 10:00-20:00"],
+    "priceRange": "₹₹",
+    "url": "https://neelutelecome.example"
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="NEELU TELECOME home">
+        <span class="logo" aria-hidden="true">
+          <!-- Inline SVG phone wrench icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="white" stroke-width="1.6"/>
+            <path d="M12 18.5h.01" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <path d="M18.5 5.5 21 3l.5.5c.9.9.9 2.4 0 3.3l-4.6 4.6-2.2-.6-.6-2.2L18.5 5.5Z" fill="white"/>
+          </svg>
+        </span>
+        <span>NEELU TELECOME</span>
+      </a>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-cta" href="tel:+919876543210" aria-label="Call us now">Call: +91 98765 43210</a>
+    </div>
+  </header>
+
+  <main id="home" class="container hero">
+    <div class="grid hero-grid">
+      <div>
+        <span class="badge">Same‑day fixes • Genuine parts • Warranty</span>
+        <h1>Fast & reliable <span style="color:var(--brand)">mobile repairing</span> in your neighborhood</h1>
+        <p class="lead">Screens, batteries, charging ports, water damage, software issues & more. Walk‑in or book a doorstep pickup in minutes.</p>
+        <div class="cta">
+          <a class="btn primary" href="#booking">Book a Repair</a>
+          <a class="btn whatsapp" href="https://wa.me/919876543210?text=Hi%20Neelu%20Telecome%2C%20I%20need%20a%20phone%20repair" target="_blank" rel="noreferrer">WhatsApp Us</a>
+          <a class="btn" href="#pricing">View Pricing</a>
+        </div>
+        <div class="statrow">
+          <div class="stat"><strong>10,000+</strong><div class="muted">Repairs done</div></div>
+          <div class="stat"><strong>4.8/5</strong><div class="muted">Customer rating</div></div>
+          <div class="stat"><strong>30–90m</strong><div class="muted">Typical fix time</div></div>
+        </div>
+      </div>
+      <div class="hero-card" aria-labelledby="quick-quote">
+        <div class="row">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5a2 2 0 0 1 2-2h6l2 2h6a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5Z" stroke="white" stroke-width="1.6"/></svg>
+          <h3 id="quick-quote">Get a quick quote</h3>
+        </div>
+        <form id="quoteForm" class="kv" novalidate>
+          <label for="brand">Phone Brand</label>
+          <input id="brand" name="brand" class="input" placeholder="e.g., Samsung, iPhone" required />
+          <label for="model">Model</label>
+          <input id="model" name="model" class="input" placeholder="e.g., A54, 13, Note 10" required />
+          <label for="issue">Issue</label>
+          <select id="issue" name="issue" class="input" required>
+            <option value="">Select an issue</option>
+            <option>Screen Broken</option>
+            <option>Battery Replacement</option>
+            <option>Charging Port</option>
+            <option>Speaker/Mic</option>
+            <option>Water Damage</option>
+            <option>Software Issue</option>
+          </select>
+          <label for="phone">Your Phone</label>
+          <input id="phone" name="phone" class="input" placeholder="+91 …" pattern="^(\+?91[- ]?)?[6-9]\d{9}$" required />
+        </form>
+        <div class="row" style="justify-content:space-between; margin-top:.6rem">
+          <button class="btn primary" onclick="submitQuote()">Get Estimate</button>
+          <small class="muted">No spam. Free consultation.</small>
+        </div>
+        <div id="quoteResult" class="muted" style="margin-top:.8rem"></div>
+      </div>
+    </div>
+  </main>
+
+  <section id="services" class="container">
+    <h2 class="section-title">Popular services</h2>
+    <p class="section-sub">We fix all major brands and issues. Quality parts with warranty.</p>
+    <div class="cards">
+      <article class="card">
+        <h4>Screen Replacement</h4>
+        <p class="muted">Cracked or unresponsive display? We use high‑quality panels with color accuracy.</p>
+        <div class="chip">30–60 min</div>
+      </article>
+      <article class="card">
+        <h4>Battery Change</h4>
+        <p class="muted">Original‑grade batteries with proper calibration for better backup and safety.</p>
+        <div class="chip">20–40 min</div>
+      </article>
+      <article class="card">
+        <h4>Charging / USB‑C Port</h4>
+        <p class="muted">No charging or loose cable? We replace ports and clean debris safely.</p>
+        <div class="chip">30–60 min</div>
+      </article>
+      <article class="card">
+        <h4>Camera & Speaker</h4>
+        <p class="muted">Dusty speakers, noisy mic, or blurry camera—restored to crisp quality.</p>
+        <div class="chip">20–50 min</div>
+      </article>
+      <article class="card">
+        <h4>Water Damage</h4>
+        <p class="muted">Ultrasonic cleaning and board‑level inspection to revive soaked phones.</p>
+        <div class="chip">2–24 hrs</div>
+      </article>
+      <article class="card">
+        <h4>Software & Data</h4>
+        <p class="muted">Boot loops, updates, backups, data transfer & recovery assistance.</p>
+        <div class="chip">Varies</div>
+      </article>
+    </div>
+  </section>
+
+  <section id="pricing" class="container">
+    <h2 class="section-title">Transparent pricing</h2>
+    <p class="section-sub">Exact cost depends on model & part quality. Ask for a free estimate.</p>
+    <div class="card">
+      <table class="price-table" aria-label="Price list">
+        <thead>
+          <tr><th>Service</th><th>Starting From</th><th>Warranty</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Screen Replacement</td><td>₹1,499</td><td>3–6 Months</td></tr>
+          <tr><td>Battery Replacement</td><td>₹899</td><td>6 Months</td></tr>
+          <tr><td>Charging Port Repair</td><td>₹699</td><td>3 Months</td></tr>
+          <tr><td>Back Glass</td><td>₹799</td><td>3 Months</td></tr>
+          <tr><td>Speaker/Mic</td><td>₹599</td><td>3 Months</td></tr>
+          <tr><td>Water Damage Treatment</td><td>₹999</td><td>—</td></tr>
+          <tr><td>Software Fixes</td><td>₹399</td><td>—</td></tr>
+        </tbody>
+      </table>
+      <p class="small" style="margin-top:.8rem">*Prices are indicative. We’ll confirm after a quick diagnosis.</p>
+    </div>
+  </section>
+
+  <section id="reviews" class="container">
+    <h2 class="section-title">What customers say</h2>
+    <p class="section-sub">Real feedback from our happy clients.</p>
+    <div class="cards">
+      <blockquote class="card">
+        <p>“Excellent service! My screen was replaced in under an hour. Fair pricing.”</p>
+        <p class="muted">— A. Sharma</p>
+      </blockquote>
+      <blockquote class="card">
+        <p>“Battery backup feels like new. Staff was polite and professional.”</p>
+        <p class="muted">— Priya Verma</p>
+      </blockquote>
+      <blockquote class="card">
+        <p>“They picked up and delivered my phone same day. Highly recommend.”</p>
+        <p class="muted">— R. Khan</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <section id="booking" class="container">
+    <h2 class="section-title">Book a repair</h2>
+    <p class="section-sub">Fill the form and we’ll call you back within 10 minutes during working hours.</p>
+    <div class="card">
+      <form id="bookingForm" class="kv" novalidate>
+        <label for="bname">Full Name</label>
+        <input id="bname" name="name" class="input" placeholder="Your name" required />
+        <label for="bphone">Phone</label>
+        <input id="bphone" name="phone" class="input" placeholder="+91 …" pattern="^(\+?91[- ]?)?[6-9]\d{9}$" required />
+        <label for="bbrand">Phone Brand</label>
+        <input id="bbrand" name="brand" class="input" placeholder="e.g., Xiaomi" required />
+        <label for="bmodel">Model</label>
+        <input id="bmodel" name="model" class="input" placeholder="e.g., 12 Pro" required />
+        <label for="bissue">Issue</label>
+        <input id="bissue" name="issue" class="input" placeholder="Brief issue" required />
+        <label for="bmethod">Service Method</label>
+        <select id="bmethod" name="method" class="input" required>
+          <option value="">Choose one</option>
+          <option>Walk‑in</option>
+          <option>Doorstep Pickup</option>
+        </select>
+      </form>
+      <div class="row" style="justify-content:space-between; margin-top:.6rem">
+        <button class="btn primary" onclick="submitBooking()">Request Callback</button>
+        <small class="muted">We respect your privacy.</small>
+      </div>
+      <div id="bookingResult" class="muted" style="margin-top:.8rem"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2 class="section-title">Visit or contact us</h2>
+    <div class="grid" style="grid-template-columns:1.1fr .9fr; gap:1rem">
+      <div class="card">
+        <h3>Store Details</h3>
+        <div class="kv" style="margin-top:.6rem">
+          <div class="muted">Address</div><div>Shop No. 12, Main Market Road, Your City, Your State 123456</div>
+          <div class="muted">Phone</div><div><a href="tel:+919876543210">+91 98765 43210</a></div>
+          <div class="muted">Email</div><div><a href="mailto:support@neelutelecome.com">support@neelutelecome.com</a></div>
+          <div class="muted">Hours</div><div>Mon–Sun: 10:00 AM – 8:00 PM</div>
+        </div>
+        <div class="cta" style="margin-top:1rem">
+          <a class="btn" href="tel:+919876543210">Call Now</a>
+          <a class="btn whatsapp" target="_blank" rel="noreferrer" href="https://wa.me/919876543210">Chat on WhatsApp</a>
+          <a class="btn" href="#booking">Book Appointment</a>
+        </div>
+      </div>
+      <div class="card" aria-label="Map location">
+        <iframe title="Map to NEELU TELECOME" style="width:100%; height:280px; border:0; border-radius:12px" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d77.2090!3d28.6139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNEELU%20TELECOME!5e0!3m2!1sen!2sin!4v0000000000">
+        </iframe>
+        <p class="small" style="margin-top:.6rem">*Replace the map embed with your exact location.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2 class="section-title">FAQs</h2>
+    <details>
+      <summary>Do you offer doorstep repair?</summary>
+      <p class="muted">Yes, pickup & drop is available nearby. Many issues can be fixed same‑day at our workshop.</p>
+    </details>
+    <details>
+      <summary>Is my data safe?</summary>
+      <p class="muted">Absolutely. We do not access your personal data and you can set a temporary passcode. We follow ESD‑safe handling.</p>
+    </details>
+    <details>
+      <summary>What about warranty?</summary>
+      <p class="muted">Parts come with shop warranty varying by category (typically 3–6 months). Physical damage and water exposure after repair are excluded.</p>
+    </details>
+  </section>
+
+  <footer>
+    <div class="container footgrid">
+      <div>
+        <div class="brand"><span class="logo" aria-hidden="true"></span><span>NEELU TELECOME</span></div>
+        <p class="small" style="margin:.6rem 0 0">Trusted mobile repairing shop offering fast, reliable service with quality parts and honest pricing.</p>
+      </div>
+      <div>
+        <strong>Quick Links</strong>
+        <ul class="small" style="list-style:none; padding:0; margin:.6rem 0 0">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#booking">Book a Repair</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Policy</strong>
+        <ul class="small" style="list-style:none; padding:0; margin:.6rem 0 0">
+          <li>Warranty Terms</li>
+          <li>Privacy Policy</li>
+          <li>Service Terms</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container" style="margin-top:1rem; display:flex; justify-content:space-between; align-items:center">
+      <small>© <span id="year"></span> NEELU TELECOME. All rights reserved.</small>
+      <small class="muted">Made with ❤ in India</small>
+    </div>
+  </footer>
+
+  <style>
+    /* inputs at bottom so they can override */
+    .input{width:100%; padding:.8rem .9rem; border-radius:12px; border:1px solid #1f2a44; background:#0b1226; color:var(--text); outline:none}
+    .input:focus{border-color:var(--brand); box-shadow:0 0 0 4px var(--ring)}
+  </style>
+
+  <script>
+    // Update footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Quote estimator (very simple demo logic)
+    function submitQuote(){
+      const f = document.getElementById('quoteForm');
+      if(!f.reportValidity()) return;
+      const issue = f.issue.value;
+      const prices = {
+        'Screen Broken': 1499,
+        'Battery Replacement': 899,
+        'Charging Port': 699,
+        'Speaker/Mic': 599,
+        'Water Damage': 999,
+        'Software Issue': 399
+      };
+      const base = prices[issue] || 499;
+      const estimate = Math.round(base * 1.18); // add 18% for GST indicative
+      document.getElementById('quoteResult').innerHTML = `Indicative estimate: <strong>₹${estimate}</strong> (incl. GST). We will confirm on call.`;
+    }
+
+    // Booking submission (demo only)
+    function submitBooking(){
+      const f = document.getElementById('bookingForm');
+      if(!f.reportValidity()) return;
+      const data = Object.fromEntries(new FormData(f).entries());
+      const msg = encodeURIComponent(`New booking:\nName: ${data.name}\nPhone: ${data.phone}\nDevice: ${data.brand} ${data.model}\nIssue: ${data.issue}\nMethod: ${data.method}`);
+      // Option 1: open WhatsApp with prefilled booking (works on mobile/desktop)
+      window.open(`https://wa.me/919876543210?text=${msg}`, '_blank');
+      document.getElementById('bookingResult').textContent = 'Thanks! We opened WhatsApp with your details. You can also expect a callback shortly.';
+      f.reset();
+    }
+
+    // Accessible keyboard focus for details summaries
+    document.querySelectorAll('summary').forEach(s=>{
+      s.addEventListener('keydown', (e)=>{
+        if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); s.parentElement.open = !s.parentElement.open; }
+      });
+    });
+  </script>
+</body>
+</html>

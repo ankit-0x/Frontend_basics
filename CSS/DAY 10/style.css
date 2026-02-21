@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+}
+.container{
+    background-color: aquamarine;
+    height: 1000px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    flex-direction: row;
+
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    justify-content: flex-start;
+
+    align-items: flex-end;
+    align-items: center;
+    align-items: stretch; /*works when height is not set*/
+    align-items: flex-start;
+
+    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+    
+    align-content: flex-start;
+    align-content: flex-end;
+    align-content: center;
+    align-content: space-around;
+    align-content: space-evenly;
+    align-content: space-between;
+}
+
+.box{
+    height: 152px;
+    width: 152px;
+    border: 2px solid black;
+}
+
+.box1{
+    background-color: red;
+}
+.box2{
+    background-color: green;
+}
+.box3{
+    background-color: blue;
+}
+.box4{
+    background-color: orange;
+}
+
+.box5{
+    background-color: brown;
+}
+.box6{
+    background-color: pink;
+}
+.box7{
+    background-color: yellow;
+}
+.box8{
+    background-color: grey;
+}
+.box9{
+    background-color: rgb(168, 93, 52);
+}
+.box10{
+    background-color: lightsalmon;
+}
+
+.card{
+    display: flex;
+    align-items: baseline;
+}
+
+.name{
+    font-size: 50px;
+}
+
+.sname{
+    font-size:25px ;
+}

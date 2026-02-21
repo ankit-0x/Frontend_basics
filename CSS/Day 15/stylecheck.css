@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    height: 100%;
+    padding: 5rem;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    grid-template-rows: repeat(3,200px);
+    gap: 10px;
+}
+
+.box{
+    background-color: green;
+}
+
+.box8{
+    height: 100px;
+    width: 100px;
+    grid-column: 2/4;
+}

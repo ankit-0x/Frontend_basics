@@ -1,0 +1,17 @@
+body{
+    background-image: url("./pexels-ferarcosn-190819.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-origin: content-box;
+}
+h1{
+    color: darkgreen;
+}
+
+p{
+    color: rgb(174, 208, 21);
+    font-family: "Special Gothic Expanded One";
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h1>Employee Details Form</h1>
+        <label for="username">Full Name:</label>
+        <input type="text" id="username" name="username" required placeholder="Enter your full name">
+        <br>
+        <br>
+        <label for="useremail">Email:</label>
+        <input type="email" id="useremail" name="useremail" required placeholder="Enter your email address">
+        <br>
+        <br>
+        <label for="contact">Phone Number:</label>
+        <input type="tel" id="contact" name="contact" placeholder="Enter your phone number">
+        <br>
+        <br>
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Others</label>
+        <br>
+        <br>
+        <label for="post">Job Title:</label>
+        <input type="text" id="post" name="profession" placeholder="Enter your job title">
+        <br>
+        <br>
+        <label for="branch">Department:</label>
+        <select id="branch" name="department" required>
+            <option value="" disabled selected>Select your Department</option>
+            <option value="CN">Computer Network</option>
+            <option value="CyberSecurity">CyberSecurity</option>
+            <option value="Developer">Developer</option>
+            <option value="Electric">Electric</option>
+            <option value="Security">Security</option>
+        </select>
+        <br>
+        <br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
